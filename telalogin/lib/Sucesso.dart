@@ -17,7 +17,8 @@ class Sucesso extends StatelessWidget {
         ),
         body: Column(
           children: [
-            Text("BienVenido, $nomeUsuario!"),
+            Text("Seja bem-vindo(a), $nomeUsuario!"),
+
           ],
         ),
       ),

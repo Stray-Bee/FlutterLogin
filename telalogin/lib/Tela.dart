@@ -10,6 +10,8 @@ class Tela extends StatefulWidget {
 }
 
 class _Tela1State extends State<Tela> {
+
+  bool _showPass = false;
   final String nome = "StrayBee";
 
   final String pass = "BeeBee";
@@ -47,9 +49,22 @@ class _Tela1State extends State<Tela> {
           TextField(
             controller: controllerSenha,
             decoration: InputDecoration(
-              labelText: "Senha",
+              icon: Icon(Icons.lock, color: Colors.deepPurple,),
+              hintText: 'Senha',
+              hintStyle: TextStyle( color: Colors.white),
+              enabledBorder: UnderlineInputBorder(
+                borderSide: BorderSide(color: Colors.black),
+              ),
+              suffixIcon: GestureDetector(
+                child: Icon(_showPass == false ? Icons.visibility_off : Icons.visibility, color: Colors.black,),
+                onTap: (){
+                  setState(() {
+                    _showPass = !_showPass;
+                  });
+                },
+               ), //labelText: "Senha",
             ),
-            obscureText: true,
+            obscureText: _showPass == false ? true : false,
           ),
           Botao("Login", () {
             String enteredNome = controllerNome.text;
@@ -64,7 +79,7 @@ class _Tela1State extends State<Tela> {
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(
                   content: Text("Usuário ou senha incorretos!"),
-                  backgroundColor: Colors.red,
+                  backgroundColor: const Color.fromARGB(255, 144, 211, 231),
                 ),
               );
             }
