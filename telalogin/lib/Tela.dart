@@ -35,7 +35,7 @@ class _Tela1State extends State<Tela> {
                 "https://cdn-icons-png.flaticon.com/512/5087/5087579.png"),
           ),
           Text(
-            "Ingrese seu Usuario",
+            "Nome de Usuário",
             style: TextStyle(fontSize: 25),
           ),
           TextField(
@@ -46,7 +46,7 @@ class _Tela1State extends State<Tela> {
               ),
           ),
           Text(
-            "Ingrese sua Senha",
+            "Insira sua Senha",
             style: TextStyle(fontSize: 25),
           ),
           TextField(
