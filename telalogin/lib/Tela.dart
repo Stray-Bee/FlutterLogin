@@ -40,7 +40,10 @@ class _Tela1State extends State<Tela> {
           ),
           TextField(
             controller: controllerNome,
-            decoration: InputDecoration(labelText: "Nome"),
+            decoration: InputDecoration(
+              icon: Icon(Icons.person, color: Colors.deepPurple,),
+              hintText: "Nome",
+              ),
           ),
           Text(
             "Ingrese sua Senha",
@@ -51,7 +54,7 @@ class _Tela1State extends State<Tela> {
             decoration: InputDecoration(
               icon: Icon(Icons.lock, color: Colors.deepPurple,),
               hintText: 'Senha',
-              hintStyle: TextStyle( color: Colors.white),
+              hintStyle: TextStyle( color: Colors.black),
               enabledBorder: UnderlineInputBorder(
                 borderSide: BorderSide(color: Colors.black),
               ),
